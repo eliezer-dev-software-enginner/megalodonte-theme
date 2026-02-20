@@ -31,10 +31,10 @@ public class DefaultTheme implements Theme {
     @Override
     public ThemeTypography typography() {
         return new ThemeTypography(
-            12, // fontSizeSmall
-            14, // fontSizeBody
-            16, // fontSizeLarge
-            18  // fontSizeTitle
+            18, // title
+            16, // subtitle
+            14, // body
+            12  // small
         );
     }
     
