@@ -1,12 +1,18 @@
 package megalodonte.theme;
 
+import megalodonte.base.theme.ThemeBorder;
+import megalodonte.base.theme.ThemeColors;
+import megalodonte.base.theme.ThemeRadius;
+import megalodonte.base.theme.ThemeSpacing;
+import megalodonte.base.theme.ThemeTypography;
+
 /**
  * Default theme implementation with comprehensive color system including button colors.
  */
 public class DefaultTheme implements Theme {
     
     @Override
-    public ThemeColors colors() {
+    public megalodonte.base.theme.ThemeColors colors() {
         return new ThemeColors(
             // Core colors
             "#f8fafc",                    // background
@@ -29,7 +35,7 @@ public class DefaultTheme implements Theme {
     }
     
     @Override
-    public ThemeTypography typography() {
+    public megalodonte.base.theme.ThemeTypography typography() {
         return new ThemeTypography(
             18, // title
             16, // subtitle
@@ -39,7 +45,7 @@ public class DefaultTheme implements Theme {
     }
     
     @Override
-    public ThemeSpacing spacing() {
+    public megalodonte.base.theme.ThemeSpacing spacing() {
         return new ThemeSpacing(
             4,   // spacingXs
             8,   // spacingSm
@@ -50,7 +56,7 @@ public class DefaultTheme implements Theme {
     }
     
 @Override
-    public ThemeRadius radius() {
+    public megalodonte.base.theme.ThemeRadius radius() {
         return new ThemeRadius(
             4,   // radiusSm
             6,   // radiusMd
@@ -59,7 +65,7 @@ public class DefaultTheme implements Theme {
     }
     
     @Override
-    public ThemeBorder border() {
+    public megalodonte.base.theme.ThemeBorder border() {
         return new ThemeBorder(
             1     // borderThin
         );

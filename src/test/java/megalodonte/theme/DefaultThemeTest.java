@@ -1,5 +1,9 @@
 package megalodonte.theme;
 
+import megalodonte.base.theme.ThemeColors;
+import megalodonte.base.theme.ThemeRadius;
+import megalodonte.base.theme.ThemeSpacing;
+import megalodonte.base.theme.ThemeTypography;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
