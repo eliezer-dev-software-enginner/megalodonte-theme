@@ -21,8 +21,8 @@ public class DefaultTheme implements Theme {
             "#64748b",                    // secondary (gray)
             "#1e293b",                    // textPrimary
             "#64748b",                    // textSecondary
-            "#e2e8f0",                    // border
-            
+           // "#e2e8f0",                    // border
+            "transparent",
             // Button colors
             "#2563eb",                    // buttonPrimary (same as primary)
             "#6b7280",                    // buttonSecondary (medium gray)
