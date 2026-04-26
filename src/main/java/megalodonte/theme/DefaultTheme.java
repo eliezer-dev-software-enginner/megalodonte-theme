@@ -67,7 +67,7 @@ public class DefaultTheme implements Theme {
     @Override
     public megalodonte.base.theme.ThemeBorder border() {
         return new ThemeBorder(
-            1     // borderThin
+            0     // borderThin
         );
     }
 }
