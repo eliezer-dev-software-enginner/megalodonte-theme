@@ -1,10 +1,15 @@
 package megalodonte.theme;
 
 import megalodonte.State;
+import megalodonte.base.theme.ThemeHolder;
 import megalodonte.base.theme.ThemeInterface;
 
 public class ThemeManager {
     private static final State<ThemeInterface> currentTheme = new State<>(new DefaultTheme());
+
+    static {
+        ThemeHolder.setSetter(theme -> currentTheme.set(theme));
+    }
 
     public static void setTheme(ThemeInterface theme) {
         currentTheme.set(theme);
