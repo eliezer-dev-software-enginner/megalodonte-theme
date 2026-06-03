@@ -2,13 +2,14 @@ package megalodonte.theme;
 
 import megalodonte.base.theme.ThemeBorder;
 import megalodonte.base.theme.ThemeColors;
+import megalodonte.base.theme.ThemeInterface;
 import megalodonte.base.theme.ThemeSpacing;
 import megalodonte.base.theme.ThemeTypography;
 
 /**
  * Default theme implementation.
  */
-public class DefaultTheme implements Theme {
+public class DefaultTheme implements ThemeInterface {
     
     @Override
     public megalodonte.base.theme.ThemeColors colors() {
