@@ -28,7 +28,6 @@ dependencies {
     testImplementation("org.mockito:mockito-junit-jupiter:5.10.0")
 
     implementation("megalodonte:megalodonte-base:1.0.0-beta")
-    implementation("megalodonte:megalodonte-reactivity:1.0.0-beta")
 }
 
 //tasks.test {
