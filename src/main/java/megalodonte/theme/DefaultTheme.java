@@ -2,35 +2,24 @@ package megalodonte.theme;
 
 import megalodonte.base.theme.ThemeBorder;
 import megalodonte.base.theme.ThemeColors;
-import megalodonte.base.theme.ThemeRadius;
 import megalodonte.base.theme.ThemeSpacing;
 import megalodonte.base.theme.ThemeTypography;
 
 /**
- * Default theme implementation with comprehensive color system including button colors.
+ * Default theme implementation.
  */
 public class DefaultTheme implements Theme {
     
     @Override
     public megalodonte.base.theme.ThemeColors colors() {
         return new ThemeColors(
-            // Core colors
             "#f8fafc",                    // background
             "#ffffff",                    // surface
             "#2563eb",                    // primary (blue)
             "#64748b",                    // secondary (gray)
             "#1e293b",                    // textPrimary
             "#64748b",                    // textSecondary
-           // "#e2e8f0",                    // border
-            "transparent",
-            // Button colors
-            "#2563eb",                    // buttonPrimary (same as primary)
-            "#6b7280",                    // buttonSecondary (medium gray)
-            "#10b981",                    // buttonSuccess (green)
-            "#f59e0b",                    // buttonWarning (yellow)
-            "#ef4444",                    // buttonDanger (red)
-            "transparent",                  // buttonGhost (transparent)
-            "#94a3b8"                     // buttonDisabled (light gray)
+            "transparent"                 // border
         );
     }
     
@@ -55,19 +44,13 @@ public class DefaultTheme implements Theme {
         );
     }
     
-@Override
-    public megalodonte.base.theme.ThemeRadius radius() {
-        return new ThemeRadius(
-            4,   // radiusSm
-            6,   // radiusMd
-            8    // radiusLg
-        );
-    }
-    
     @Override
     public megalodonte.base.theme.ThemeBorder border() {
         return new ThemeBorder(
-            0     // borderThin
+            0,     // width
+            4,     // radiusSm
+            6,     // radiusMd
+            8      // radiusLg
         );
     }
 }
