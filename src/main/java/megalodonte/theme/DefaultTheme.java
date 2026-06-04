@@ -12,7 +12,7 @@ import megalodonte.base.theme.ThemeTypography;
 public class DefaultTheme implements ThemeInterface {
     
     @Override
-    public megalodonte.base.theme.ThemeColors colors() {
+    public ThemeColors colors() {
         return new ThemeColors(
             "#f8fafc",                    // background
             "#ffffff",                    // surface
@@ -25,7 +25,7 @@ public class DefaultTheme implements ThemeInterface {
     }
     
     @Override
-    public megalodonte.base.theme.ThemeTypography typography() {
+    public ThemeTypography typography() {
         return new ThemeTypography(
             18, // title
             16, // subtitle
@@ -35,7 +35,7 @@ public class DefaultTheme implements ThemeInterface {
     }
     
     @Override
-    public megalodonte.base.theme.ThemeSpacing spacing() {
+    public ThemeSpacing spacing() {
         return new ThemeSpacing(
             4,   // spacingXs
             8,   // spacingSm
@@ -46,7 +46,7 @@ public class DefaultTheme implements ThemeInterface {
     }
     
     @Override
-    public megalodonte.base.theme.ThemeBorder border() {
+    public ThemeBorder border() {
         return new ThemeBorder(
             0,     // width
             4,     // radiusSm
