@@ -1,7 +1,6 @@
 package megalodonte.theme;
 
 import megalodonte.base.theme.ThemeColors;
-import megalodonte.base.theme.ThemeRadius;
 import megalodonte.base.theme.ThemeSpacing;
 import megalodonte.base.theme.ThemeTypography;
 import org.junit.jupiter.api.Test;
@@ -18,7 +17,6 @@ class DefaultThemeTest {
         assertNotNull(theme.colors());
         assertNotNull(theme.typography());
         assertNotNull(theme.spacing());
-        assertNotNull(theme.radius());
         assertNotNull(theme.border());
     }
     
@@ -29,9 +27,6 @@ class DefaultThemeTest {
         
         assertEquals("#2563eb", colors.primary());
         assertEquals("#64748b", colors.secondary());
-        assertEquals("#10b981", colors.buttonSuccess());
-        assertEquals("#ef4444", colors.buttonDanger());
-        assertEquals("transparent", colors.buttonGhost());
     }
     
     @Test
@@ -56,14 +51,4 @@ class DefaultThemeTest {
 //        assertEquals(32, spacing.spacingXl());
     }
     
-    @Test
-    void testDefaultThemeRadius() {
-        DefaultTheme theme = new DefaultTheme();
-        ThemeRadius radius = theme.radius();
-        
-//        assertEquals(4, radius.radiusSm());
-//        assertEquals(6, radius.radiusMd());
-//        assertEquals(8, radius.radiusLg());
-//        assertEquals(12, radius.radiusXl());
-    }
 }
