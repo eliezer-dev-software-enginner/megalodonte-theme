@@ -20,7 +20,8 @@ public class DefaultTheme implements ThemeInterface {
             "#64748b",                    // secondary (gray)
             "#1e293b",                    // textPrimary
             "#64748b",                    // textSecondary
-            "transparent"                 // border
+            "transparent",                 // border,
+                "#A9A9A9"       //placeholder
         );
     }
     
