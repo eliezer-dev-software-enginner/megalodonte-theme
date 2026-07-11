@@ -20,8 +20,11 @@ public class DefaultTheme implements ThemeInterface {
             "#64748b",                    // secondary (gray)
             "#1e293b",                    // textPrimary
             "#64748b",                    // textSecondary
-            "transparent",                 // border,
-                "#A9A9A9"       //placeholder
+            "transparent",                // border
+            "#A9A9A9",                    // placeholder
+            "#dbeafe",                    // selection (primary with low opacity)
+            "#93c5fd",                    // focusRing (lighter primary)
+            "#f1f5f9"                     // hover (very light gray)
         );
     }
     
