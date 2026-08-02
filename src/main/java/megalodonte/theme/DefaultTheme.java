@@ -47,9 +47,9 @@ public class DefaultTheme implements ThemeInterface {
     }
 
     /**
-     * Font sizes (in px, before {@link megalodonte.base.scale.ScaleProvider} scaling)
-     * for each {@link megalodonte.utils.related.TextVariant}, from title down to small
-     * print. No custom {@code fontFamily} — falls back to the platform's default UI font.
+     * Font sizes (in px, before {@link megalodonte.base.scale.ScaleProvider} scaling),
+     * from title down to small print. No custom {@code fontFamily} — falls back to the
+     * platform's default UI font.
      */
     @Override
     public ThemeTypography typography() {
