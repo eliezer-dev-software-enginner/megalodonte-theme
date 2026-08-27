@@ -3,6 +3,7 @@ package megalodonte.theme;
 import megalodonte.base.theme.ThemeBorder;
 import megalodonte.base.theme.ThemeColors;
 import megalodonte.base.theme.ThemeInterface;
+import megalodonte.base.theme.ThemePadding;
 import megalodonte.base.theme.ThemeSpacing;
 import megalodonte.base.theme.ThemeTypography;
 
@@ -74,6 +75,22 @@ public class DefaultTheme implements ThemeInterface {
             16,  // spacingMd
             24,  // spacingLg
             32    // spacingXl
+        );
+    }
+
+    /**
+     * Padding scale (in px, before {@link megalodonte.base.scale.ScaleProvider}
+     * scaling), from extra-small to extra-large — default padding for components
+     * that implement {@link megalodonte.props.Paddable}.
+     */
+    @Override
+    public ThemePadding padding() {
+        return new ThemePadding(
+            4,   // paddingXs
+            8,   // paddingSm
+            16,  // paddingMd (default fallback)
+            24,  // paddingLg
+            32   // paddingXl
         );
     }
 
