@@ -33,17 +33,20 @@ public class DefaultTheme implements ThemeInterface {
     @Override
     public ThemeColors colors() {
         return new ThemeColors(
-            "#f8fafc",                    // background
-            "#ffffff",                    // surface
-            "#2563eb",                    // primary (blue)
-            "#64748b",                    // secondary (gray)
-            "#1e293b",                    // textPrimary
-            "#64748b",                    // textSecondary
-            "transparent",                // border
-            "#A9A9A9",                    // placeholder
-            "#dbeafe",                    // selection (primary with low opacity)
-            "#93c5fd",                    // focusRing (lighter primary)
-            "#f1f5f9"                     // hover (very light gray)
+                "#f8fafc",                    // background
+                "#ffffff",                    // surface
+                "#2563eb",                    // primary (blue)
+                "#64748b",                    // secondary (gray)
+                "#1e293b",                    // textPrimary
+                "#64748b",                    // textSecondary
+                "transparent",                // border
+                "#A9A9A9",                    // placeholder
+                "#dbeafe",                    // selection (primary with low opacity)
+                "#93c5fd",                    // focusRing (lighter primary)
+                "#f1f5f9",                     // hover (very light gray)
+                "#10b981",                    // success
+                "#f59e0b",                    // warning
+                "#ef4444"                      // danger
         );
     }
 
@@ -55,10 +58,10 @@ public class DefaultTheme implements ThemeInterface {
     @Override
     public ThemeTypography typography() {
         return new ThemeTypography(
-            18, // title
-            16, // subtitle
-            14, // body
-            12  // small
+                18, // title
+                16, // subtitle
+                14, // body
+                12  // small
         );
     }
 
@@ -70,11 +73,11 @@ public class DefaultTheme implements ThemeInterface {
     @Override
     public ThemeSpacing spacing() {
         return new ThemeSpacing(
-            4,   // spacingXs
-            8,   // spacingSm
-            16,  // spacingMd
-            24,  // spacingLg
-            32    // spacingXl
+                4,   // spacingXs
+                8,   // spacingSm
+                16,  // spacingMd
+                24,  // spacingLg
+                32    // spacingXl
         );
     }
 
@@ -86,11 +89,11 @@ public class DefaultTheme implements ThemeInterface {
     @Override
     public ThemePadding padding() {
         return new ThemePadding(
-            4,   // paddingXs
-            8,   // paddingSm
-            16,  // paddingMd (default fallback)
-            24,  // paddingLg
-            32   // paddingXl
+                4,   // paddingXs
+                8,   // paddingSm
+                16,  // paddingMd (default fallback)
+                24,  // paddingLg
+                32   // paddingXl
         );
     }
 
@@ -101,10 +104,10 @@ public class DefaultTheme implements ThemeInterface {
     @Override
     public ThemeBorder border() {
         return new ThemeBorder(
-            0,     // width
-            4,     // radiusSm
-            6,     // radiusMd
-            8      // radiusLg
+                0,     // width
+                4,     // radiusSm
+                6,     // radiusMd
+                8      // radiusLg
         );
     }
 }
