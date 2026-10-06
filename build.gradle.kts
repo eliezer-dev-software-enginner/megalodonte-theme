@@ -1,5 +1,5 @@
 plugins {
-    id("java")
+    id("java-library")
     id("maven-publish")
 }
 
@@ -27,7 +27,7 @@ dependencies {
     testImplementation("org.mockito:mockito-core:5.10.0")
     testImplementation("org.mockito:mockito-junit-jupiter:5.10.0")
 
-    implementation("megalodonte:megalodonte-base:1.0.0-beta")
+    api("megalodonte:megalodonte-core:1.0.0-beta")
 }
 
 //tasks.test {
@@ -35,8 +35,10 @@ dependencies {
 //}
 
 tasks.test {
-    enabled = false
+    useJUnitPlatform()
 }
+
+tasks.withType<JavaCompile>().configureEach { options.release.set(17) }
 
 tasks.jar {
     archiveBaseName.set("megalodonte-theme")

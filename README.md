@@ -2,7 +2,11 @@
 
 Ready-to-use theme implementation for the Megalodonte framework: a single class,
 [`DefaultTheme`](src/main/java/megalodonte/theme/DefaultTheme.java), implementing the
-`ThemeInterface` contract defined in `megalodonte-base`.
+`ThemeInterface` contract defined in `megalodonte-core`.
+
+The same artifact is now usable by JavaFX and Android: its only production
+dependency is megalodonte-core, and it emits Java 17 bytecode. Publish core before
+theme. The Java 25 toolchain is retained for development.
 
 ## What this is
 
