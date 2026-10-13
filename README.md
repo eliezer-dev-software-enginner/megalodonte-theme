@@ -120,8 +120,7 @@ component re-subscribes automatically and updates.
 ## Technologies
 
 - Java 25
-- JUnit 5 + Mockito (test dependencies only — `DefaultThemeTest` currently disabled
-  via `tasks.test { enabled = false }` in `build.gradle.kts`)
+- JUnit 5 + Mockito; `DefaultThemeTest` runs with `./gradlew test`
 - Gradle with Kotlin DSL
 
 ## License
