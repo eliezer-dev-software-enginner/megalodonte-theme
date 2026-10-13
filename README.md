@@ -76,7 +76,10 @@ public class MyTheme implements ThemeInterface {
             "#64748b",  // placeholder
             "#0c4a6e",  // selection
             "#0ea5e9",  // focusRing
-            "#1e293b"   // hover
+            "#1e293b",  // hover
+            "#16a34a",  // success
+            "#d97706",  // warning
+            "#dc2626"   // danger
         );
     }
 
@@ -88,6 +91,11 @@ public class MyTheme implements ThemeInterface {
     @Override
     public ThemeSpacing spacing() {
         return new ThemeSpacing(4, 8, 16, 24, 32); // xs, sm, md, lg, xl
+    }
+
+    @Override
+    public ThemePadding padding() {
+        return new ThemePadding(4, 8, 16, 24, 32);
     }
 
     @Override
