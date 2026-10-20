@@ -28,6 +28,7 @@ class DefaultThemeTest {
         
         assertEquals("#2563eb", colors.primary());
         assertEquals("#64748b", colors.secondary());
+        assertEquals("#64748b", colors.placeholder());
     }
     
     @Test
