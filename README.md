@@ -4,22 +4,22 @@ Ready-to-use theme implementation for the Megalodonte framework: a single class,
 [`DefaultTheme`](src/main/java/megalodonte/theme/DefaultTheme.java), implementing the
 `ThemeInterface` contract defined in `megalodonte-core`.
 
-The same artifact is now usable by JavaFX and Android: its only production
-dependency is megalodonte-core, and it emits Java 17 bytecode. Publish core before
-theme. The Java 25 toolchain is retained for development.
+The library depends on `megalodonte-core` and emits Java 17 bytecode. Its Gradle
+build uses a Java 25 toolchain. Platform compatibility depends on the core library
+and the consuming application.
 
 ## What this is
 
-Every visually-styled component in `megalodonte-components` (`Text`, `Input`,
-`Container`, `Card`, ...) resolves its colors, font sizes, spacing, and border radii
-against whatever theme is currently set via `ThemeManager`. `ThemeInterface` only
-defines the *contract* — `colors()`, `typography()`, `spacing()`, `border()` — it
-ships no implementation. `megalodonte-theme` provides one: `DefaultTheme`, a light
-theme with a blue primary color.
+`megalodonte-theme` provides `DefaultTheme`, a light theme with a blue primary
+color. It implements the `ThemeInterface` contract from `megalodonte-core` with
+colors, typography, spacing, padding, and border values.
 
 ## Installation (Maven Local)
 
-Publish the library locally:
+This build requires a Java 25 toolchain and the
+`megalodonte:megalodonte-core:1.0.0-beta` artifact in Maven Local (or another
+repository configured for the build). Once core is available, publish this
+library locally:
 
 ```bash
 ./gradlew publishToMavenLocal
@@ -40,20 +40,13 @@ dependencies {
 
 ## Usage
 
-Set the theme once, early in `main()` — **before** any screen renders. Every
-`Props.apply(node)` call in `megalodonte-base` subscribes to `ThemeManager.state()`
-and silently skips applying any styling while the theme is still `null`:
+Set the theme before rendering components that use it:
 
 ```java
 import megalodonte.base.theme.ThemeManager;
 import megalodonte.theme.DefaultTheme;
 
-public class Main {
-    static void main() {
-        ThemeManager.setTheme(new DefaultTheme());
-        MegalodonteApp.run(context -> context.useView(new MyScreen()));
-    }
-}
+ThemeManager.setTheme(new DefaultTheme());
 ```
 
 ## Writing a custom theme
@@ -107,25 +100,25 @@ public class MyTheme implements ThemeInterface {
 
 `ThemeTypography` also accepts a `fontFamily` as its first constructor argument
 (`null` by default — falls back to the platform's UI font); loading the actual font
-file, if it isn't already installed on the OS, is the application's responsibility
-(e.g. `Font.loadFont(...)` at startup, before the family name becomes usable).
+file, if it isn't already installed on the OS, is the application's responsibility.
 
 All numeric values (font sizes, spacing, border widths/radii) are plain `int`s in
 px, resolved through `ScaleProvider.scale(...)` at read time — themes don't need to
 handle DPI scaling themselves.
 
-To switch themes at runtime, just call `ThemeManager.setTheme(...)` again — every
-component re-subscribes automatically and updates.
+To change the current theme, call `ThemeManager.setTheme(...)` again. Whether
+existing components update depends on the consuming application's integration.
 
 ## Technologies
 
-- Java 25
+- Java 25 toolchain for building; Java 17 bytecode target
 - JUnit 5 + Mockito; `DefaultThemeTest` runs with `./gradlew test`
 - Gradle with Kotlin DSL
 
 ## License
 
-MIT License
+No license file is included in this repository. Confirm the licensing terms with
+the maintainer before reuse or redistribution.
 
 ## Author
 
