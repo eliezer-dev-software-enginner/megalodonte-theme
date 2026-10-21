@@ -55,6 +55,13 @@ ThemeManager.setTheme(new DefaultTheme());
 `ThemeInterface` directly instead of depending on this module:
 
 ```java
+import megalodonte.base.theme.ThemeBorder;
+import megalodonte.base.theme.ThemeColors;
+import megalodonte.base.theme.ThemeInterface;
+import megalodonte.base.theme.ThemePadding;
+import megalodonte.base.theme.ThemeSpacing;
+import megalodonte.base.theme.ThemeTypography;
+
 public class MyTheme implements ThemeInterface {
     @Override
     public ThemeColors colors() {
