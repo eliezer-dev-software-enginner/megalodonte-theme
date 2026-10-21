@@ -42,7 +42,7 @@ public class DefaultTheme implements ThemeInterface {
                 "transparent",                // border
                 "#64748b",                    // placeholder (readable on white surfaces)
                 "#dbeafe",                    // selection (primary with low opacity)
-                "#93c5fd",                    // focusRing (lighter primary)
+                "#1d4ed8",                    // focusRing (visible on white surfaces)
                 "#f1f5f9",                     // hover (very light gray)
                 "#10b981",                    // success
                 "#f59e0b",                    // warning

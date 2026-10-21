@@ -29,6 +29,25 @@ class DefaultThemeTest {
         assertEquals("#2563eb", colors.primary());
         assertEquals("#64748b", colors.secondary());
         assertEquals("#64748b", colors.placeholder());
+        assertTrue(contrast(colors.focusRing(), colors.surface()) >= 3.0,
+                "Focus indicator must contrast with the surface");
+    }
+
+    private static double contrast(String first, String second) {
+        double a = luminance(first);
+        double b = luminance(second);
+        return (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05);
+    }
+
+    private static double luminance(String hex) {
+        double[] weights = {0.2126, 0.7152, 0.0722};
+        double result = 0;
+        for (int i = 0; i < 3; i++) {
+            double channel = Integer.parseInt(hex.substring(1 + 2 * i, 3 + 2 * i), 16) / 255.0;
+            result += weights[i] * (channel <= 0.04045
+                    ? channel / 12.92 : Math.pow((channel + 0.055) / 1.055, 2.4));
+        }
+        return result;
     }
     
     @Test
