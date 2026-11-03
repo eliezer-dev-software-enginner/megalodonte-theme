@@ -10,7 +10,7 @@ import megalodonte.base.theme.ThemeTypography;
 /**
  * Ready-to-use {@link ThemeInterface} implementation — a light theme with a blue
  * primary color, no default font family override (falls back to the platform's UI
- * font), and no border width by default (relies on radius/color alone).
+ * font), and a subtle one-pixel border by default.
  * <p>
  * Apply it once, early in {@code main()}, before any screen renders — components
  * silently skip all {@code Props}-driven styling (colors, font sizes, borders, ...)
@@ -26,9 +26,8 @@ public class DefaultTheme implements ThemeInterface {
     /**
      * Color palette: background/surface, primary/secondary, text (primary/secondary),
      * border, placeholder, and interaction states (selection, focus ring, hover).
-     * All values are CSS-compatible color strings (hex here; {@code "transparent"}
-     * for {@code border}, since this theme relies on radius/shadow instead of a
-     * visible border by default).
+     * All values are CSS-compatible color strings. The border token is a light
+     * gray that remains visible on white surfaces.
      */
     @Override
     public ThemeColors colors() {
@@ -39,7 +38,7 @@ public class DefaultTheme implements ThemeInterface {
                 "#64748b",                    // secondary (gray)
                 "#1e293b",                    // textPrimary
                 "#64748b",                    // textSecondary
-                "transparent",                // border
+                "#cbd5e1",                   // border
                 "#64748b",                    // placeholder (readable on white surfaces)
                 "#dbeafe",                    // selection (primary with low opacity)
                 "#1d4ed8",                    // focusRing (visible on white surfaces)
@@ -98,13 +97,13 @@ public class DefaultTheme implements ThemeInterface {
     }
 
     /**
-     * Border width (0 — this theme doesn't draw a visible border by default) and
+     * Border width (1px) and
      * corner radii (small/medium/large, in px before scaling) used across components.
      */
     @Override
     public ThemeBorder border() {
         return new ThemeBorder(
-                0,     // width
+                1,     // width
                 4,     // radiusSm
                 6,     // radiusMd
                 8      // radiusLg

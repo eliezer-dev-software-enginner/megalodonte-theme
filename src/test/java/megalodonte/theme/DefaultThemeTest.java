@@ -29,6 +29,8 @@ class DefaultThemeTest {
         assertEquals("#2563eb", colors.primary());
         assertEquals("#64748b", colors.secondary());
         assertEquals("#64748b", colors.placeholder());
+        assertEquals("#cbd5e1", colors.border());
+        assertEquals(1, theme.border().width());
         assertTrue(contrast(colors.focusRing(), colors.surface()) >= 3.0,
                 "Focus indicator must contrast with the surface");
     }

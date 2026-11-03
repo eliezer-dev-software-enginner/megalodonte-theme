@@ -13,6 +13,8 @@ and the consuming application.
 `megalodonte-theme` provides `DefaultTheme`, a light theme with a blue primary
 color. It implements the `ThemeInterface` contract from `megalodonte-core` with
 colors, typography, spacing, padding, and border values.
+The default border is a light gray (`#cbd5e1`) with a one-pixel width, so inputs
+and other controls using the theme border remain visible on white surfaces.
 
 ## Installation (Maven Local)
 
