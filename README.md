@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/images/megalodonte-logo.png" width="180" alt="Megalodonte logo">
+</p>
+
 # megalodonte-theme
 
 Ready-to-use theme implementation for the Megalodonte framework: a single class,
